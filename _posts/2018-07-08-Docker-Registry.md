@@ -4,7 +4,12 @@ published: true
 categories: docker
 ---
 
-This is a guide to setting up a docker registry that can be used on a local network.
+This is a guide to setting up a *docker registry* that can be used on a LAN.
+
+ where
+ several machines would like to have a docker registry from where docker images can be shared between different users.
+
+Most of what is written here can be found in the official docker references listed [here](#References).
 
 # [](#header-1)Using self-signed certificate
 
@@ -33,13 +38,17 @@ $ ls certs
 domain.crt domain.key
 ```
 
-Instruct every Docker daemon to trust that certificate.
+Instruct every Docker daemon to trust that certificate. If `myhost` also would like to push/pull images from the registry, it should perform the following steps as well:
 
 ```
-$ sudo mkdir /
+$ sudo mkdir -p /etc/docker/certs.d/myhost.local:441
+$ sudo cp ~/docker_ws/registry/certs/domain.crt /etc/docker/certs.d/myhost.local:441/ca.crt
 ```
+
+> The `/etc/docker/certs.d` folder does not exist by default.
+> The file `domain.crt` is renamed to `ca.crt` when moved to `certs.d/myhost.local:441`.
 
 # [](#header-1)References
 
-* [1] https://docs.docker.com/registry/insecure/
-* [2] https://docs.docker.com/registry/deploying/#customize-the-storage-back-end
+* [1] <https://docs.docker.com/registry/insecure/>
+* [2] <https://docs.docker.com/registry/deploying/#customize-the-storage-back-end>
