@@ -1,3 +1,6 @@
-# About this page
+---
+layout: page
+title: About
+---
 
-hello there
+Something about me.
