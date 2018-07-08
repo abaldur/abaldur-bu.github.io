@@ -72,5 +72,5 @@ $ sudo cp ~/docker_ws/registry/certs/domain.crt /etc/docker/certs.d/myhost.local
 
 # [](#header-1)References
 
-* [1] <https://docs.docker.com/registry/insecure/>
-* [2] <https://docs.docker.com/registry/deploying/#customize-the-storage-back-end>
+* [1] <https://docs.docker.com/registry/insecure/#use-self-signed-certificates>
+* [2] <https://docs.docker.com/registry/deploying/#run-an-externally-accessible-registry>
