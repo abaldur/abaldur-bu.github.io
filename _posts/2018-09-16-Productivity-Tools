@@ -1,0 +1,8 @@
+---
+title: Making a productive working environment.
+published: true
+categories: linux
+---
+
+If you use certain directories a lot and you don't want to type in the long path every time, try this:
+  <https://unix.stackexchange.com/questions/1469/bash-directory-shortcuts>
