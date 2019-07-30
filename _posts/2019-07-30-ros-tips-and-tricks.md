@@ -9,3 +9,4 @@ A collection of tips and tricks I have found useful. I will try to keep it updat
 ## Links
 
 * [ROS packages mixing C++ and Python](https://answers.ros.org/question/257653/standards-for-mixing-c-and-python-nodes-in-same-package/)
+* [How to structure a python-based ROS package](http://www.artificialhumancompanions.com/structure-python-based-ros-package/)
